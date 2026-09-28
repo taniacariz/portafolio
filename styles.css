@@ -1,0 +1,691 @@
+/* ==========================================================================
+   PORTAFOLIO PROFESIONAL - TANIA CARIZ HUECHAO
+   Estilo: Dark Tech Glassmorphism & High Contrast UI
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variables de Diseño
+   -------------------------------------------------------------------------- */
+:root {
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Paleta Oscura de Alto Impacto */
+  --bg-body: #0b0f19;
+  --bg-darker: #070a12;
+  --bg-card: rgba(17, 24, 39, 0.72);
+  --bg-card-hover: rgba(26, 36, 56, 0.85);
+
+  /* Acentos Gradientes y Neón */
+  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --accent-color: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --accent-pink: #ec4899;
+
+  /* Bordes & Sombras Glassmorphism */
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(139, 92, 246, 0.4);
+  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --glow-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
+
+  /* Textos */
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+}
+
+body.light-theme {
+  --bg-body: #edf4ff;
+  --bg-darker: #e2ebff;
+  --bg-card: rgba(255, 255, 255, 0.72);
+  --bg-card-hover: rgba(248, 250, 255, 0.9);
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 48%, #ec4899 100%);
+  --accent-color: #6d28d9;
+  --accent-cyan: #0f766e;
+  --accent-pink: #be185d;
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-border-hover: rgba(109, 40, 217, 0.25);
+  --glass-shadow: 0 10px 30px -14px rgba(79, 70, 229, 0.2);
+  --glow-shadow: 0 0 25px rgba(109, 40, 217, 0.18);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+/* --------------------------------------------------------------------------
+   Configuraciones Base
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.light-theme .text-light-subtle,
+body.light-theme .text-secondary,
+body.light-theme .text-white-50,
+body.light-theme .small.text-secondary,
+body.light-theme .list-unstyled .small,
+body.light-theme .badge-sub,
+body.light-theme .text-light-subtle.small,
+body.light-theme .text-light-subtle strong,
+body.light-theme .text-light-subtle em {
+  color: var(--text-secondary) !important;
+}
+
+body.light-theme .text-white,
+body.light-theme .section-title,
+body.light-theme .navbar-brand,
+body.light-theme .brand-text,
+body.light-theme .badge-title,
+body.light-theme .h4,
+body.light-theme .h5,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6,
+body.light-theme .lead,
+body.light-theme .contact-channel-item strong,
+body.light-theme .text-white-50 {
+  color: var(--text-primary) !important;
+}
+
+body.light-theme .glass-card,
+body.light-theme .bg-darker {
+  background: var(--bg-card);
+}
+
+body.light-theme .hero-avatar-img {
+  border-color: #f8fafc;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+a {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Clases de Fondo y Sección */
+.bg-darker {
+  background-color: var(--bg-darker);
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+
+/* Separadores y Títulos */
+.section-subtitle {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--primary-gradient);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-pink {
+  color: var(--accent-pink) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+.navbar {
+  background: rgba(11, 15, 25, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.navbar.scrolled {
+  background: rgba(7, 10, 18, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.12);
+}
+
+.brand-badge {
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.brand-highlight {
+  color: var(--accent-color);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Botones Personalizados
+   -------------------------------------------------------------------------- */
+.btn-primary-gradient {
+  background: var(--primary-gradient);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-shadow);
+}
+
+.btn-outline-glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-hover);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-toggle .theme-icon {
+  font-size: 1.1rem;
+}
+
+body.light-theme .theme-toggle {
+  background: rgba(109, 40, 217, 0.08);
+}
+
+.shadow-glow {
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section & Avatar
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 6.5rem;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.badge-status {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Luces decorativas en Hero */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  background: rgba(99, 102, 241, 0.15);
+  top: 10%;
+  left: -100px;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(217, 70, 239, 0.12);
+  bottom: 5%;
+  right: -50px;
+}
+
+/* Avatar con efecto de anillo */
+.hero-avatar-wrapper {
+  position: relative;
+  width: 290px;
+  height: 290px;
+}
+
+@media (min-width: 768px) {
+  .hero-avatar-wrapper {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+.avatar-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 8px;
+  background: var(--primary-gradient);
+  box-shadow: var(--glow-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-body);
+}
+
+/* Badges flotantes en Hero */
+.floating-badge {
+  position: absolute;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--glass-shadow);
+  animation: floatAnim 4s ease-in-out infinite;
+}
+
+.badge-role {
+  bottom: 0px;
+  left: -20px;
+}
+
+.badge-exp {
+  top: 15px;
+  right: -20px;
+  animation-delay: 2s;
+}
+
+.badge-title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.badge-sub {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.social-icon-hero {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.social-icon-hero:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Tarjetas Glassmorphism
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-4px);
+}
+
+.border-bottom-glass {
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.border-top-glass {
+  border-top: 1px solid var(--glass-border);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Línea de Tiempo (Experiencia)
+   -------------------------------------------------------------------------- */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 18px;
+  left: -2.6rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 4px solid var(--bg-body);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.bg-accent-soft {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Habilidades & Badges
+   -------------------------------------------------------------------------- */
+.skill-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.badge-skill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.badge-skill:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+.soft-badge {
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  color: #f472b6;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Tarjetas de Proyectos
+   -------------------------------------------------------------------------- */
+.project-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), var(--glow-shadow);
+}
+
+.project-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 0.25rem;
+}
+
+.project-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border: 1px solid var(--glass-border);
+}
+
+.tech-pill {
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Contacto & Formulario
+   -------------------------------------------------------------------------- */
+.contact-channel-item {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  transition: all 0.25s ease;
+}
+
+.contact-channel-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--glass-border-hover);
+  transform: translateX(4px);
+}
+
+.contact-channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25);
+}
+
+.glass-input::placeholder {
+  color: #6b7280;
+}
+
+/* --------------------------------------------------------------------------
+   Botón Scroll To Top
+   -------------------------------------------------------------------------- */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.btn-scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.btn-scroll-top:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-shadow);
+}

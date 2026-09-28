@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Básico -->
+  <title>Tania Cariz Huechao | Desarrolladora Front-End & Diseñadora</title>
+  <meta name="description" content="Portafolio profesional de Tania Daniela Cariz Huechao. Desarrolladora Front-End y estudiante de Ingeniería en Informática especializada en React, JavaScript y UI/UX." />
+  <meta name="author" content="Tania Daniela Cariz Huechao" />
+  <meta name="keywords" content="Frontend Developer, React, JavaScript, UI/UX, Portafolio, Web Development, Santiago Chile" />
+
+  <!-- Google Fonts: Outfit e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
+
+  <!-- ========================================================================= -->
+  <!-- BARRA DE NAVEGACIÓN (STICKY / BLUR) -->
+  <!-- ========================================================================= -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top py-3 transition-all" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <span class="brand-badge">&lt;TC /&gt;</span>
+        <span class="brand-text">Tania<span class="brand-highlight">Cariz</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <i class="bi bi-list fs-1 text-gradient"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-mi">Quién soy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiencia">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar a modo día" aria-pressed="false">
+              <i class="bi bi-sun-fill theme-icon"></i>
+            </button>
+          </li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <a class="btn btn-primary-gradient btn-sm px-4 py-2 rounded-pill shadow-sm" href="#contacto">
+              <i class="bi bi-envelope-fill me-1"></i> Contactar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- HERO / INICIO -->
+    <!-- ========================================================================= -->
+    <header id="inicio" class="hero-section d-flex align-items-center position-relative overflow-hidden">
+      <!-- Luces de fondo decorativas -->
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+
+      <div class="container position-relative z-1 py-5">
+        <div class="row align-items-center g-5 pt-lg-5">
+          <!-- Columna Texto -->
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="badge-status d-inline-flex align-items-center gap-2 mb-3">
+              <span class="pulse-dot"></span>
+              <span>Disponible para nuevos desafíos</span>
+            </div>
+
+            <h1 class="display-4 fw-extrabold mb-3">
+              Hola, soy <br class="d-none d-sm-block" />
+              <span class="text-gradient">Tania Daniela Cariz</span>
+            </h1>
+
+            <p class="hero-lead text-light-subtle mb-4">
+              <strong>Desarrolladora Front-End</strong> y estudiante de <strong>Ingeniería en Informática</strong>. 
+              Conecto la precisión y sensibilidad espacial de la <em>arquitectura</em> con la solidez del desarrollo de software para crear experiencias web atractivas, escalables y orientadas al usuario.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
+              <a href="#proyectos" class="btn btn-primary-gradient px-4 py-3 rounded-pill fw-semibold shadow-glow">
+                <i class="bi bi-code-slash me-2"></i>Ver Proyectos
+              </a>
+              <a href="#contacto" class="btn btn-outline-glass px-4 py-3 rounded-pill fw-semibold">
+                <i class="bi bi-chat-dots me-2"></i>Conversemos
+              </a>
+            </div>
+
+            <!-- Accesos rápidos sociales -->
+            <div class="d-flex align-items-center gap-3 justify-content-center justify-content-lg-start text-secondary pt-2">
+              <span class="small text-uppercase tracking-wider">Perfiles:</span>
+              <a href="https://github.com/taniacariz" target="_blank" rel="noopener noreferrer" class="social-icon-hero" aria-label="Perfil de GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="mailto:taniacarizhuechao@gmail.com" class="social-icon-hero" aria-label="Enviar correo electrónico">
+                <i class="bi bi-envelope"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-hero" aria-label="Perfil de LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna Imagen -->
+          <div class="col-lg-5 text-center">
+            <div class="hero-avatar-wrapper mx-auto">
+              <div class="avatar-ring">
+                <!-- Se enlaza la foto adjunta Foto CV.jpg. Si no se encuentra, tiene soporte de fallback -->
+                <img 
+                  src="Foto CV.jpg" 
+                  alt="Fotografía profesional de Tania Daniela Cariz Huechao" 
+                  class="img-fluid hero-avatar-img"
+                  onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/84297120?v=4';" 
+                />
+              </div>
+              <div class="floating-badge badge-role">
+                <i class="bi bi-code-square text-accent"></i>
+                <div>
+                  <span class="badge-title">Front-End Dev</span>
+                  <small class="badge-sub">React &bull; JavaScript &bull; AI</small>
+                </div>
+              </div>
+              <div class="floating-badge badge-exp">
+                <i class="bi bi-mortarboard-fill text-info"></i>
+                <div>
+                  <span class="badge-title">Ing. Informática</span>
+                  <small class="badge-sub">IACC &bull; En Curso</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- SOBRE MÍ ("QUIÉN SOY") -->
+    <!-- ========================================================================= -->
+    <section id="sobre-mi" class="py-5 section-padding position-relative">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Conóceme</span>
+          <h2 class="section-title">Quién Soy &amp; Mi Filosofía</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Tarjeta de Presentación Principal -->
+          <div class="col-lg-8">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <h3 class="h4 fw-bold text-white mb-3">
+                Uniendo visión estética con solidez técnica
+              </h3>
+              <p class="text-light-subtle">
+                Soy desarrolladora Front-End con una profunda pasión por el diseño y la tecnología. Cuento con un perfil altamente autodidacta y una sólida capacidad para tomar decisiones técnicas y visuales de forma autónoma.
+              </p>
+              <p class="text-light-subtle">
+                Mi background proviene de 6 años de formación en <strong>Arquitectura (UTEM)</strong>, lo que me otorgó un agudo sentido de la estructura espacial, jerarquía visual y ergonomía del usuario. Posteriormente consolidé mis bases en desarrollo en <strong>Laboratoria</strong> (Bootcamp de alta exigencia) y actualmente potencio mis competencias cursando <strong>Ingeniería en Informática en IACC</strong>.
+              </p>
+              <p class="text-light-subtle mb-4">
+                Mi objetivo profesional es construir interfaces accesibles, responsivas y de alto rendimiento que no solo resuelvan un problema comercial, sino que ofrezcan una experiencia de usuario memorable.
+              </p>
+
+              <!-- Grid de Atributos Rápidos -->
+              <div class="row g-3 pt-2">
+                <div class="col-sm-6">
+                  <div class="feature-item d-flex align-items-center gap-3">
+                    <div class="feature-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Ubicación</span>
+                      <strong class="text-white">Santiago, Chile</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-item d-flex align-items-center gap-3">
+                    <div class="feature-icon"><i class="bi bi-briefcase-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Estado Actual</span>
+                      <strong class="text-white">Front-End Developer en Sulit</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-item d-flex align-items-center gap-3">
+                    <div class="feature-icon"><i class="bi bi-book-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Educación Superior</span>
+                      <strong class="text-white">Ingeniería en Informática</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="feature-item d-flex align-items-center gap-3">
+                    <div class="feature-icon"><i class="bi bi-check-circle-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Especialidad</span>
+                      <strong class="text-white">React, Vite &amp; UI Integrations</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta de Educación y Certificaciones -->
+          <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <h4 class="h5 fw-bold text-white mb-3 d-flex align-items-center gap-2">
+                  <i class="bi bi-mortarboard text-accent"></i> Trayectoria Académica
+                </h4>
+                
+                <ul class="list-unstyled education-list mb-0">
+                  <li class="mb-3 pb-3 border-bottom-glass">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">En curso</span>
+                    <h5 class="h6 mb-1 text-white">Ingeniería en Informática</h5>
+                    <p class="small text-secondary mb-0">IACC &bull; Profundización técnica y desarrollo de software.</p>
+                  </li>
+                  <li class="mb-3 pb-3 border-bottom-glass">
+                    <span class="badge bg-secondary-subtle text-light border border-secondary-subtle mb-1">2022</span>
+                    <h5 class="h6 mb-1 text-white">Certificación Javascript Developer</h5>
+                    <p class="small text-secondary mb-0">Escalab | Tech Talents Hub</p>
+                  </li>
+                  <li class="mb-3 pb-3 border-bottom-glass">
+                    <span class="badge bg-secondary-subtle text-light border border-secondary-subtle mb-1">2021</span>
+                    <h5 class="h6 mb-1 text-white">Front End Developer</h5>
+                    <p class="small text-secondary mb-0">Laboratoria SCL016 &bull; Formación intensiva multidisciplinar.</p>
+                  </li>
+                  <li>
+                    <span class="badge bg-secondary-subtle text-light border border-secondary-subtle mb-1">2012 - 2020</span>
+                    <h5 class="h6 mb-1 text-white">Licenciada en Arquitectura</h5>
+                    <p class="small text-secondary mb-0">Universidad Tecnológica Metropolitana (UTEM)</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- EXPERIENCIA LABORAL (TIMELINE) -->
+    <!-- ========================================================================= -->
+    <section id="experiencia" class="py-5 section-padding bg-darker position-relative">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Trayectoria</span>
+          <h2 class="section-title">Experiencia Laboral</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container position-relative">
+          <!-- Item 1: Sulit -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-4 timeline-content">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                <h3 class="h5 fw-bold text-white mb-0">Desarrolladora Front-End</h3>
+                <span class="badge bg-accent-soft text-accent">Octubre 2024 - Presente</span>
+              </div>
+              <h4 class="h6 text-gradient fw-semibold mb-3">Sulit &bull; Santiago, Chile</h4>
+              <p class="text-light-subtle small mb-3">
+                Responsable del desarrollo integral de proyectos web y soluciones dinámicas, combinando el desarrollo Front-End tradicional con Inteligencia Artificial y gamificación:
+              </p>
+              <ul class="text-light-subtle small ps-3 mb-3">
+                <li>Diseño e implementación de componentes modulares con <strong>React, Vite y JavaScript</strong>.</li>
+                <li>Desarrollo de chatbots y agentes de IA conversacionales consumiendo APIs mediante <strong>Python, LlamaIndex y n8n</strong>.</li>
+                <li>Consumo, estructuración y validación de <strong>APIs RESTful</strong> mediante Postman.</li>
+                <li>Desarrollo end-to-end de videojuego corporativo con <strong>Phaser</strong> y creación de activos en pixel art.</li>
+                <li>Diseño y desarrollo de identidad corporativa (creación del personaje oficial "Su").</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Vite</span>
+                <span class="tech-pill">JavaScript ES6+</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">LlamaIndex</span>
+                <span class="tech-pill">Phaser</span>
+                <span class="tech-pill">WordPress</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Propulsow -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-4 timeline-content">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                <h3 class="h5 fw-bold text-white mb-0">Desarrolladora Front-End</h3>
+                <span class="badge bg-secondary-subtle text-light">Agosto 2021 - Marzo 2024</span>
+              </div>
+              <h4 class="h6 text-gradient fw-semibold mb-3">Propulsow &bull; Santiago, Chile</h4>
+              <p class="text-light-subtle small mb-3">
+                Desarrollo Front-End en ecosistemas de e-commerce de alta conversión:
+              </p>
+              <ul class="text-light-subtle small ps-3 mb-3">
+                <li>Configuración, personalización y maquetación de tiendas online escalables con <strong>VTEX y WordPress</strong>.</li>
+                <li>Creación e integración de componentes interactivos con <strong>React y JavaScript</strong> para optimizar el embudo de ventas.</li>
+                <li>Desarrollo ágil de landing pages comerciales y banners orientados a performance.</li>
+                <li>Capacitación técnica y onboarding a clientes para la autogestión de plataformas.</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">VTEX IO</span>
+                <span class="tech-pill">WordPress</span>
+                <span class="tech-pill">Sass</span>
+                <span class="tech-pill">UI/UX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Freelance -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card p-4 timeline-content">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                <h3 class="h5 fw-bold text-white mb-0">Diseñadora e Ilustradora</h3>
+                <span class="badge bg-secondary-subtle text-light">Enero 2018 - Presente</span>
+              </div>
+              <h4 class="h6 text-gradient fw-semibold mb-3">Freelance &amp; Marcas Propias</h4>
+              <p class="text-light-subtle small mb-3">
+                Dirección de arte, creación de marca, piezas visuales personalizadas y diseño de interfaces con retroalimentación ágil.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="tech-pill">Figma</span>
+                <span class="tech-pill">Adobe Illustrator</span>
+                <span class="tech-pill">Photoshop</span>
+                <span class="tech-pill">Branding</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- HABILIDADES (SKILLS) -->
+    <!-- ========================================================================= -->
+    <section id="habilidades" class="py-5 section-padding position-relative">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Competencias</span>
+          <h2 class="section-title">Habilidades Técnicas &amp; Blandas</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Frontend & Core -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 skill-box">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="skill-icon-wrap"><i class="bi bi-fileTYPE-code text-accent"></i></div>
+                <h3 class="h5 fw-bold text-white mb-0">Desarrollo Frontend</h3>
+              </div>
+              <p class="small text-secondary mb-3">Construcción de interfaces modernas, reactivas y accesibles:</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>React</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>JavaScript (ES6+)</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>Vite</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>HTML5 Semántico</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>CSS3 / Sass (SCSS)</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>Bootstrap 5</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>Metodología BEM</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-accent me-1"></i>Fetch / Axios REST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plataformas, Backend & IA -->
+          <div class="col-md-6 col-lg-4">
+            <div class="glass-card p-4 h-100 skill-box">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="skill-icon-wrap"><i class="bi bi-cpu text-info"></i></div>
+                <h3 class="h5 fw-bold text-white mb-0">Backend, IA &amp; CMS</h3>
+              </div>
+              <p class="small text-secondary mb-3">Integración de servicios, plataformas comerciales y automatización:</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>Python (Básico/Scripting)</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>LlamaIndex</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>n8n Workflows</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>WordPress &amp; Elementor</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>VTEX E-commerce</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>Firebase</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>Postman API Testing</span>
+                <span class="badge-skill"><i class="bi bi-check2 text-info me-1"></i>Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diseño & Habilidades Blandas -->
+          <div class="col-md-12 col-lg-4">
+            <div class="glass-card p-4 h-100 skill-box">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="skill-icon-wrap"><i class="bi bi-palette text-pink"></i></div>
+                <h3 class="h5 fw-bold text-white mb-0">Diseño UI/UX &amp; Soft Skills</h3>
+              </div>
+              <p class="small text-secondary mb-3">Capacidades analíticas, diseño visual y trabajo en equipo:</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge-skill"><i class="bi bi-star-fill text-warning me-1"></i>Figma</span>
+                <span class="badge-skill"><i class="bi bi-star-fill text-warning me-1"></i>Adobe Illustrator</span>
+                <span class="badge-skill"><i class="bi bi-star-fill text-warning me-1"></i>Photoshop</span>
+                <span class="badge-skill"><i class="bi bi-star-fill text-warning me-1"></i>Adobe XD</span>
+              </div>
+              <h4 class="h6 text-white-50 text-uppercase tracking-wider small mb-2">Habilidades Blandas:</h4>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="soft-badge">Aprendizaje Autónomo</span>
+                <span class="soft-badge">Adaptabilidad</span>
+                <span class="soft-badge">Creatividad &amp; Criterio Visual</span>
+                <span class="soft-badge">Organización</span>
+                <span class="soft-badge">Comunicación Asertiva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PROYECTOS -->
+    <!-- ========================================================================= -->
+    <section id="proyectos" class="py-5 section-padding bg-darker position-relative">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Portfolio</span>
+          <h2 class="section-title">Proyectos Destacados</h2>
+          <p class="text-light-subtle max-w-600 mx-auto">
+            Selección de desarrollos interactivos que demuestran capacidades en lógica de programación, arquitectura frontend, persistencia y maquetación responsiva.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Proyecto 1: Alke Wallet -->
+          <div class="col-md-6 col-lg-6">
+            <article class="glass-card project-card h-100 d-flex flex-column overflow-hidden">
+              <div class="project-header p-4 pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                  <span class="project-category">Fintech App</span>
+                  <h3 class="h4 fw-bold text-white mb-1">Alke Wallet</h3>
+                </div>
+                <div class="project-icon-badge">
+                  <i class="bi bi-wallet2 text-accent"></i>
+                </div>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <p class="text-light-subtle small mb-3">
+                    Billetera digital interactiva diseñada para la gestión financiera personal. Permite realizar transferencias monetarias simuladas, depósitos, retiros y visualización detallada del historial de movimientos con balance en tiempo real y persistencia de datos.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-pill">JavaScript (ES6+)</span>
+                    <span class="tech-pill">Bootstrap</span>
+                    <span class="tech-pill">LocalStorage</span>
+                    <span class="tech-pill">CSS3</span>
+                    <span class="tech-pill">HTML5</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="https://taniacariz.github.io/alke-wallet/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gradient btn-sm w-100 py-2 rounded-pill fw-semibold">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Ver Proyecto
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 2: SmartBudget -->
+          <div class="col-md-6 col-lg-6">
+            <article class="glass-card project-card h-100 d-flex flex-column overflow-hidden">
+              <div class="project-header p-4 pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                  <span class="project-category">Productividad &amp; Finanzas</span>
+                  <h3 class="h4 fw-bold text-white mb-1">SmartBudget</h3>
+                </div>
+                <div class="project-icon-badge">
+                  <i class="bi bi-pie-chart-fill text-info"></i>
+                </div>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <p class="text-light-subtle small mb-3">
+                    Aplicación de presupuesto personal construida bajo estándares de arquitectura CSS modular (BEM) y preprocesador Sass. Ofrece control de ingresos vs. egresos, categorización de gastos y cálculo dinámico de porcentajes disponibles.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-pill">Bootstrap 5</span>
+                    <span class="tech-pill">Sass / SCSS</span>
+                    <span class="tech-pill">BEM Architecture</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">Responsive Design</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="https://taniacariz.github.io/SmartBudget/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gradient btn-sm w-100 py-2 rounded-pill fw-semibold">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Ver Proyecto
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 3: TaskFlow -->
+          <div class="col-md-6 col-lg-6">
+            <article class="glass-card project-card h-100 d-flex flex-column overflow-hidden">
+              <div class="project-header p-4 pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                  <span class="project-category">Gestión de Tareas (POO)</span>
+                  <h3 class="h4 fw-bold text-white mb-1">TaskFlow</h3>
+                </div>
+                <div class="project-icon-badge">
+                  <i class="bi bi-check2-square text-success"></i>
+                </div>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <p class="text-light-subtle small mb-3">
+                    Gestor interactivo de tareas desarrollado con Programación Orientada a Objetos (POO). Incorpora consumo asíncrono de API externa (JSONPlaceholder), filtros de estado (completada/pendiente), almacenamiento en LocalStorage y renderizado modular en el DOM.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-pill">JavaScript (POO)</span>
+                    <span class="tech-pill">Fetch API / Async Await</span>
+                    <span class="tech-pill">LocalStorage</span>
+                    <span class="tech-pill">DOM Scripting</span>
+                    <span class="tech-pill">CSS3 Flex/Grid</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="https://taniacariz.github.io/TaskFlow/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gradient btn-sm w-100 py-2 rounded-pill fw-semibold">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Ver Proyecto
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 4: Aplicación Consola -->
+          <div class="col-md-6 col-lg-6">
+            <article class="glass-card project-card h-100 d-flex flex-column overflow-hidden">
+              <div class="project-header p-4 pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                  <span class="project-category">Lógica Interactiva &amp; CLI</span>
+                  <h3 class="h4 fw-bold text-white mb-1">Aplicación Consola</h3>
+                </div>
+                <div class="project-icon-badge">
+                  <i class="bi bi-terminal-fill text-warning"></i>
+                </div>
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <p class="text-light-subtle small mb-3">
+                    Aplicación interactiva inspirada en interfaces de terminal y consola interactiva. Demuestra el dominio de algoritmos fundamentales de JavaScript, control de flujo, eventos de teclado y emulación visual de un entorno de ejecución retro/moderno.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-pill">JavaScript Vanilla</span>
+                    <span class="tech-pill">Event Handling</span>
+                    <span class="tech-pill">Terminal UI Design</span>
+                    <span class="tech-pill">HTML5 Canvas/DOM</span>
+                    <span class="tech-pill">CSS Animations</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="https://taniacariz.github.io/AplicacionConsola/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gradient btn-sm w-100 py-2 rounded-pill fw-semibold">
+                    <i class="bi bi-box-arrow-up-right me-1"></i> Ver Proyecto
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CONTACTO -->
+    <!-- ========================================================================= -->
+    <section id="contacto" class="py-5 section-padding position-relative">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="section-subtitle">Hablemos</span>
+          <h2 class="section-title">Ponte en Contacto</h2>
+          <p class="text-light-subtle max-w-600 mx-auto">
+            ¿Tienes un proyecto en mente, una propuesta laboral o deseas colaborar? Escríbeme y responderé a la brevedad.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Columna Información de Contacto -->
+          <div class="col-lg-5">
+            <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 fw-bold text-white mb-3">Información de Contacto</h3>
+                <p class="text-light-subtle small mb-4">
+                  Actualmente radicada en Santiago de Chile, con disponibilidad para modalidades remotas e híbridas.
+                </p>
+
+                <div class="d-flex flex-column gap-3 mb-4">
+                  <a href="mailto:taniacarizhuechao@gmail.com" class="contact-channel-item d-flex align-items-center gap-3 text-decoration-none">
+                    <div class="contact-channel-icon"><i class="bi bi-envelope-at-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Correo Electrónico</span>
+                      <strong class="text-white">taniacarizhuechao@gmail.com</strong>
+                    </div>
+                  </a>
+
+                  <a href="tel:+56955362392" class="contact-channel-item d-flex align-items-center gap-3 text-decoration-none">
+                    <div class="contact-channel-icon"><i class="bi bi-telephone-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Teléfono / WhatsApp</span>
+                      <strong class="text-white">+56 9 5536 2392</strong>
+                    </div>
+                  </a>
+
+                  <div class="contact-channel-item d-flex align-items-center gap-3">
+                    <div class="contact-channel-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                      <span class="d-block small text-secondary">Ubicación</span>
+                      <strong class="text-white">Santiago, Chile</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Enlaces a Redes -->
+              <div>
+                <h4 class="h6 text-white-50 text-uppercase tracking-wider small mb-3">Encuéntrame en:</h4>
+                <div class="d-flex gap-2">
+                  <a href="https://github.com/taniacariz" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass px-3 py-2 rounded-pill small">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass px-3 py-2 rounded-pill small">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Formulario de Contacto -->
+          <div class="col-lg-7">
+            <div class="glass-card p-4 p-md-5">
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label text-white small fw-medium">Nombre completo *</label>
+                    <input type="text" class="form-control glass-input" id="contactName" placeholder="Ej: Marcela González" required />
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label text-white small fw-medium">Correo electrónico *</label>
+                    <input type="email" class="form-control glass-input" id="contactEmail" placeholder="nombre@correo.com" required />
+                    <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label text-white small fw-medium">Asunto *</label>
+                    <input type="text" class="form-control glass-input" id="contactSubject" placeholder="Ej: Propuesta de Proyecto / Entrevista" required />
+                    <div class="invalid-feedback">Por favor, especifica un asunto.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label text-white small fw-medium">Mensaje *</label>
+                    <textarea class="form-control glass-input" id="contactMessage" rows="5" placeholder="Escribe aquí tu mensaje o detalles de la propuesta..." required></textarea>
+                    <div class="invalid-feedback">Por favor, escribe un mensaje antes de enviar.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" id="submitBtn" class="btn btn-primary-gradient px-4 py-3 rounded-pill fw-semibold w-100 shadow-glow">
+                      <span id="btnText"><i class="bi bi-send-fill me-2"></i>Enviar Mensaje</span>
+                      <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Notificación de estado -->
+                <div id="formAlert" class="alert d-none mt-3 mb-0" role="alert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="footer py-4 border-top-glass">
+    <div class="container">
+      <div class="row align-items-center g-3 text-center text-md-start">
+        <div class="col-md-6">
+          <p class="text-secondary small mb-0">
+            &copy; <span id="currentYear"></span> <strong>Tania Daniela Cariz Huechao</strong>. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <span class="text-secondary small">
+            Diseñado &amp; Desarrollado con <i class="bi bi-heart-fill text-accent"></i> en HTML5, CSS3 &amp; JS.
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Volver Arriba (Scroll to Top) -->
+  <button id="btnScrollTop" class="btn-scroll-top" aria-label="Volver al inicio de la página">
+    <i class="bi bi-arrow-up-short fs-4"></i>
+  </button>
+
+  <!-- Bootstrap 5.3.3 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Script interactivo personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
